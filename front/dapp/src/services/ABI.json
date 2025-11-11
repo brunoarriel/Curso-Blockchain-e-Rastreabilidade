@@ -1,0 +1,150 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_codAnimal",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_valor",
+				"type": "uint256"
+			}
+		],
+		"name": "cadOferta",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_codAnimal",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_Destino",
+				"type": "uint256"
+			}
+		],
+		"name": "comprarAnimal",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_codAnimal",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_codDestino",
+				"type": "uint256"
+			}
+		],
+		"name": "movAnimal",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_nome",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_codPropriedade",
+				"type": "uint256"
+			}
+		],
+		"name": "registraAnimal",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "animais",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "proprietario",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "nome",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "codPropriedade",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "dataRegistro",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "preco",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_codAnimal",
+				"type": "uint256"
+			}
+		],
+		"name": "getHistMov",
+		"outputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "ultimoRegistro",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
