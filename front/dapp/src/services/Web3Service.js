@@ -1,7 +1,7 @@
 import Web3 from "web3";
 import ABI from "./ABI.json";
 
-const CONTRACT_ADDRESS = " 0x04895fD14B31F4D48A42b552259f23496D009f12";
+const CONTRACT_ADDRESS = "0x04895fd14b31f4d48a42b552259f23496d009f12";
 
 export async function doLogin() {
     if(!window.ethereum) throw new Error(`Metamask não instalada!`);
@@ -23,24 +23,7 @@ function getContract() {
     return new web3.eth.Contract(ABI, CONTRACT_ADDRESS, { from });
 }
 
-export async function getDispute() {
+export async function registraAnimal(_nome, _codPropriedade) {
     const contract = getContract();
-    return contract.methods.dispute().call();
-}
-
-export async function placeBet(candidate, amountInEth) {
-    const contract = getContract();
-    return contract.methods.bet(candidate).send({
-        value: Web3.utils.toWei(amountInEth, "ether")
-    });
-}
-
-export async function finishDispute(winner) {
-    const contract = getContract();
-    return contract.methods.finishDispute(winner).send();
-}
-
-export async function claimPrize() {
-    const contract = getContract();
-    return contract.methods.claim().send();
+    return contract.methods.registraAnimal(_nome, _codPropriedade).send();
 }
